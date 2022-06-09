@@ -11,36 +11,38 @@ int main()
     int remainder = 0; // any number devide by ten  the reaminder is it's last digit
     int counter = 0;   // number of binary digit
 
-    
-    // Prompt user for input
+    // Prompt user for binary number
     printf("Enter a five digit binary number ");
     scanf("%d", &binaryNumber);
-    
-    // check for input is greater than 0
+
+    int binaryValue = binaryNumber; // copy unser input to binary value
+
+    // check if it is five digit binary
     while (binaryNumber > 0)
     {
         binaryNumber /= 10;
         counter++;
     }
-
-    // if the input is not a five digit binary ask for imput again
+    // check if counter is 5 
     if (counter != 5)
     {
-        printf("Enter a five digit binary number ");
-        scanf("%d", &binaryNumber);
+        puts("The input is not a five digit number ");
+        return 0;
     }
 
     // check that the input is not zero
-    while (binaryNumber != 0)
+    while (binaryValue != 0)
     {
-        remainder = binaryNumber % 10; // get remainder
+
+        remainder = binaryValue % 10; // get remainder
         decimal = decimal + (remainder * exponent);
 
         // to remove used bin digit dived by to
-        binaryNumber /= 10;
+        binaryValue /= 10;
         exponent *= 2;
     }
-    printf("%d", decimal);
+    printf("%d\n", decimal);
 
+   
     return 0;
 }

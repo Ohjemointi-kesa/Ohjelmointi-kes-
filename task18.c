@@ -13,6 +13,7 @@ int main()
     puts("Enter real numbers or a negative to quit ");
     scanf("%lf", &userInput);
 
+
     while (userInput >= 0)
     {
         // check if input is negative 
@@ -23,7 +24,7 @@ int main()
         }
 
         // Prompt the user for  next input
-        puts("Enter positive real numbers > ");
+        puts("Enter real numbers or a negative to quit");
         scanf("%lf", &userInput);
     }
     avarage = sum / counter;
