@@ -34,6 +34,8 @@ int main(void)
 
     printf("%5s%5.2f\n", "YHTEENSA ", parkingTimeOne + parkingTimeTwo + parkingTimeThree);
 
+      
+    
     return 0;
 }
 
